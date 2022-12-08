@@ -18,7 +18,7 @@ a{
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: #eac293;
+    background-color: black;
 }
 
 .title h1{
@@ -85,12 +85,12 @@ span:hover{
     align-items: center;
     position: fixed;
     height: 18vh;
-    background-color: black;
+    background-color: white;
     top:2.5em;
     right: -1em;
     max-width: 25rem;
     width: 100rem;
-    color:white;
+    color:black;
     font-size:1.2rem;
 }
 
@@ -103,14 +103,16 @@ span:hover{
     max-width: 700px;
     width: 100%;
     margin-top: 3rem;
+    padding: 0 1em;
 }
 
 .container-content h1{
     font-size:2.5rem;
+    text-align: center;
 }
 
 .container{
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -161,10 +163,12 @@ span:hover{
 @media(max-width:499px){
     .box-link{
         bottom:1em;
-        left: 2em;
+        left: 1em;
         background: black;
         padding: 1em 2em;
         border-radius: .5em;
+        max-width: 260px;
+        width: 100%;
     }
 
     .span-3:hover li{
@@ -178,5 +182,9 @@ span:hover{
     .title{
         align-items: center;
         justify-content: center;
+    }
+
+    .title h1{
+        text-align: center;
     }
 }

@@ -1,7 +1,11 @@
+import "./fis.css"
+import Logo from '../components/header'
+
 export default function Fisica(){
     return(
-        <div>
-            <h1>Matéria 2</h1>
-        </div>
+        <main className="container-principal">
+            <Logo/>
+            
+        </main>
     )
 }

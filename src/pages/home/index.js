@@ -4,9 +4,10 @@ import { AiFillCopyrightCircle } from 'react-icons/ai'
 
 export default function Home(){
     return(
-        <div className="container-principal">
+        <main className="container-principal">
             <header className="title">
                 <h1>IFormulas</h1>
+
                 <nav className='box-link'>
                     <span className='span-1'>Contatos
                       <ul>
@@ -36,7 +37,7 @@ export default function Home(){
                 </nav>
             </header>
 
-            <main className="container-content">
+            <section className="container-content">
                 <h1>Escolha a matéria: </h1>
 
                 <div className="container mat">
@@ -54,7 +55,8 @@ export default function Home(){
                         Química
                     </a>
                 </div>
-            </main>
+            </section>
+            
             <footer>
 
                 <Icon>
@@ -64,6 +66,6 @@ export default function Home(){
                 
             </footer>
 
-        </div>
+        </main>
     )
 }

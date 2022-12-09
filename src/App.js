@@ -5,6 +5,7 @@ import Erro from "./pages/erro";
 import Matematica from './pages/mat'
 import Fisica from './pages/fisica'
 import Quimica from './pages/quimica'
+import { Termo } from './pages/fisica/Termologia'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/fisica',
     element: <Fisica />
+  },
+  {
+    path: '/fisica/termologia',
+    element: <Termo />
   },
   {
     path: '/quimica',

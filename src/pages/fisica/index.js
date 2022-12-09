@@ -1,5 +1,6 @@
 import "./fis.css"
 import Logo from '../components/header'
+import {AiFillCopyrightCircle} from 'react-icons/ai'
 
 export default function Fisica(){
     return(
@@ -13,10 +14,16 @@ export default function Fisica(){
            </div>  
 
             <section className="box-button">
-                <button>Termologia</button>
+                <button>
+                    <a className="link" href="./fisica/termologia">Termologia</a>
+                </button>
                 <button>Cinemática</button>
                 <button>HidroEstática</button>
             </section>
+
+            <footer>
+                <AiFillCopyrightCircle size={20}/>Igor Abreu
+            </footer>
         </main>
     )
 }

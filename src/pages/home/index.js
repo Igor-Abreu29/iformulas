@@ -41,11 +41,9 @@ export default function Home(){
                 <h1>Escolha a matéria: </h1>
 
                 <div className="container mat" onClick={mat}>
-                    Matemática
-                    <div className='dropdown-mat'>
-                            <li>Termologia</li>
-                            <li>Cinemática</li>
-                    </div>
+                    <a className='link' href='../matematica'>
+                        Matemática
+                    </a>
                 </div>
                 <div className="container fis">
                     <a className="link" href="../fisica">

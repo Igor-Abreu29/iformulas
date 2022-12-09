@@ -1,0 +1,127 @@
+.div-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-1{
+    background-color: #dbdada;
+    max-width: 700px;
+    padding: 1em;
+    width: 100%;
+    margin-top: 2rem;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: .4rem;
+    position: relative;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100;
+    border: 3px solid black;
+    max-width: 650px;
+    width: 100%;
+    padding: .5rem;
+}
+
+form input{
+    outline: none;
+    border:none;
+    padding: .8rem 2.5rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+
+.box-number{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-number input{
+    margin-bottom: .5em;
+}
+
+.box-number div{
+    max-width: 100%;
+    width: 100%;
+    font-size:1.2rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-number > div > label{
+    position: absolute;
+    font-weight: bold;
+    left:0;
+}
+
+#result, #calc{
+    margin-top: .5rem;
+}
+
+.result, .calc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.calc label{
+    left: -5rem;
+    display: flex;
+}
+
+.result label, .calc label{
+    font-size: 1.2rem;
+    margin-right: 6px;
+    font-weight: bold;
+    position: absolute;
+    left:-6rem;
+}
+
+#calc{
+    background-color: white;
+    padding: .8rem 2.5rem;
+    border-radius: .2rem;
+    width: 17.2rem;
+    font-size: 1.2rem;
+    color:#7a7171;
+}
+
+.button{
+    padding-top: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+button{
+    padding: .5rem 2rem;
+    border: none;
+    background-color: #025c02;
+    color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 2px black;
+}
+
+.Limpar{
+    position: absolute;
+    bottom:-2.8rem;
+    background-color: #8a0303;
+}

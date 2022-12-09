@@ -40,10 +40,12 @@ export default function Home(){
             <section className="container-content">
                 <h1>Escolha a matéria: </h1>
 
-                <div className="container mat">
-                    <a className="link" href="../matematica">
-                        Matemática
-                    </a>
+                <div className="container mat" onClick={mat}>
+                    Matemática
+                    <div className='dropdown-mat'>
+                            <li>Termologia</li>
+                            <li>Cinemática</li>
+                    </div>
                 </div>
                 <div className="container fis">
                     <a className="link" href="../fisica">
@@ -68,4 +70,16 @@ export default function Home(){
 
         </main>
     )
+}
+
+function mat(){
+    const dropdown = document.querySelector('.dropdown-mat')
+    let cls = dropdown.getAttribute('class')
+    console.log(cls)
+    if(cls === 'dropdown-mat'){
+        dropdown.style.display = 'block'
+    }
+    else{
+        dropdown.style.display = 'none'
+    }
 }

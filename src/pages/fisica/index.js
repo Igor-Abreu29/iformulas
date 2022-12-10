@@ -1,11 +1,20 @@
 import "./fis.css"
-import Logo from '../components/header'
 import {AiFillCopyrightCircle} from 'react-icons/ai'
+import { IoMdArrowBack } from "react-icons/io"
+import { Link } from "../components/link"
+
 
 export default function Fisica(){
     return(
         <main className="container-principal">
-            <Logo/>
+            <header className="title">
+                <h1>Física:</h1>
+                <Link url={'/'}>
+                    <div className="back">
+                        <IoMdArrowBack className="back-icon"/>
+                    </div>
+                </Link>
+            </header>
             
            <div className="box-title">
                 <h1>
@@ -14,11 +23,19 @@ export default function Fisica(){
            </div>  
 
             <section className="box-button">
+                
                 <button>
-                    <a className="link" href="./fisica/termologia">Termologia</a>
+                    <Link url="./fisica/termologia">Termologia</Link>
                 </button>
-                <button>Cinemática</button>
-                <button>HidroEstática</button>
+
+                <button>
+                    <Link>Cinemática</Link>
+                </button>
+
+                <button>
+                    <Link>HidroEstática</Link>
+                </button>
+
             </section>
 
             <footer>

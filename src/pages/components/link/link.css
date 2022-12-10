@@ -1,0 +1,8 @@
+.Link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color:white;
+    padding: 1rem 12rem 1rem 10rem;
+    max-width: 500px;
+    width: 100%;
+}

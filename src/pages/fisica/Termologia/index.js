@@ -1,4 +1,6 @@
 import './termo.css'
+import { IoMdArrowBack } from 'react-icons/io'
+import { Link } from '../../components/link'
 
 export function Termo(){
     return(
@@ -7,6 +9,12 @@ export function Termo(){
                 <h1>
                     Termologia: 
                 </h1>
+
+                <Link url={'/fisica'}>
+                    <div className="back">
+                        <IoMdArrowBack className="back-icon"/>
+                    </div>
+                </Link>
             </header>
 
             <section className='section-1'>

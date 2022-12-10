@@ -8,6 +8,14 @@
     --violet: blueviolet;
 }
 
+.back{
+    background-color: #079191;
+    position: fixed;
+    right: 1rem;
+    top:1rem;
+}
+
+
 .box-title{
     background: linear-gradient(var(--black), var(--violet));
     background-clip: text;
@@ -30,16 +38,15 @@
 
 .box-button button{
     background: linear-gradient( 180deg,var(--black), var(--violet));
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    max-width: 450px;
-    width: 100%;
     margin-top: .4rem;
     border-radius: 4px;
     cursor: pointer;
     transition: all .5s;
     border:none;
     color:white;
+    max-width: 500px;
+    width: 100%;
+    padding: 1rem 2rem;
 }
 
 .box-button button:hover{

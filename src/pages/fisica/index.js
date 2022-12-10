@@ -7,7 +7,7 @@ import { Link } from "../components/link"
 export default function Fisica(){
     return(
         <main className="container-principal">
-            <header className="title">
+            <header className="title title-fis">
                 <h1>Física:</h1>
                 <Link url={'/'}>
                     <div className="back">

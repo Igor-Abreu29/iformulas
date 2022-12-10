@@ -1,0 +1,30 @@
+.error-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.erro{
+     background-color: transparent;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.erro h1{
+    font-size: 3rem;
+}
+
+.information-erro{
+    color:white;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.information-erro h2{
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}

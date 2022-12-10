@@ -125,3 +125,20 @@ button{
     bottom:-2.8rem;
     background-color: #8a0303;
 }
+
+.none{
+    position: absolute;
+    bottom:-18rem;
+    background-color: #000000;
+    padding: .2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.none input{
+    margin-top:.5rem;
+}

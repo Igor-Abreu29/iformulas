@@ -169,6 +169,50 @@ export function Termo(){
                 txtn4.value = '';
          }
      }
+
+     function calorL(){
+            let input1 = Number(txtn2.value)
+            let input2 = Number(txtn3.value)
+            let input3 = Number(txtn4.value)
+
+            if((txtn2.value.length === 0) && (txtn3.value.length === 0) && (txtn4.value.length === 0)){
+                toast.warning("Por favor, adicione um valor!")
+            }else{
+              if((txtn2.value.length !== 0) && (txtn3.value.length !== 0) && (txtn4.value.length !== 0)){
+                toast.warning("Adicione apenas dois valores!")
+              }
+                if(txtn2.value.length === 0){
+                    let divisão = input2 * input3
+                    result.value = `${divisão} cal `
+        
+                    calc.style.color = 'black';
+                    calc.innerHTML = `Q = ${input2} * ${input3} <br/>`
+                    calc.innerHTML += `Q = ${divisão} cal`
+                }
+            
+                if(txtn3.value.length === 0){
+                    let divisão = input1 / input3
+                    result.value = `${divisão} cal`
+        
+                    calc.style.color = 'black';
+                    calc.innerHTML = `m = ${input1} / ${input3} <br/>`
+                    calc.innerHTML += `m = ${divisão} g/Kg`
+                }
+            
+                if(txtn4.value.length === 0){
+                    let multiplicação = input1 / input2
+                    result.value = `${multiplicação} cal/g`
+        
+                    calc.style.color = 'black';
+                    calc.innerHTML = `L = ${input1} / ${input2} <br/>`
+                    calc.innerHTML += `L = ${multiplicação} cal/g`
+                }
+            
+                txtn2.value = '';
+                txtn3.value = '';
+                txtn4.value = '';
+         }
+     }
     
         function Limpar(){
             txtn1.value = '';
@@ -202,22 +246,22 @@ export function Termo(){
                         <div>
                             <label>Q:</label>
                             <input 
-                           value={mal || ""} onChange={(e) => setMal(e.target.value)} id='txtn1' type={'number'} placeholder="Para calor sensível..." />
+                            onChange={(e) => setMal(e.target.value)} id='txtn1' type={'number'} placeholder="Para calor sensível..." />
                         </div>
                             
                         <div>
                             <input
-                             value={cont || ""} onChange={(e) => setCont(e.target.value)} id='txtn2' type={'number'} placeholder="Escreva aqui..."  />
+                              onChange={(e) => setCont(e.target.value)} id='txtn2' type={'number'} placeholder="Escreva aqui..."  />
                         </div>
 
                         <div>
                             <input 
-                            value={cant || ""} onChange={(e) => setCant(e.target.value)} id='txtn3' type={'number'} placeholder="Escreva aqui..." />
+                             onChange={(e) => setCant(e.target.value)} id='txtn3' type={'number'} placeholder="Escreva aqui..." />
                         </div> 
 
                         <div>
                             <input 
-                         value={cent || ""} onChange={(e) => setCent(e.target.value)} id='txtn4' type={'number'} placeholder="Escreva aqui..." />
+                          onChange={(e) => setCent(e.target.value)} id='txtn4' type={'number'} placeholder="Escreva aqui..." />
                         </div>    
                     </div>
 
@@ -247,6 +291,7 @@ export function Termo(){
                     <button onClick={calorS}>CalorS</button>
                     <button onClick={capacT}>CapacidadeT</button>
                     <button onClick={fluxoC}>FluxoC</button>
+                    <button onClick={calorL}>CalorL</button>
                     <button className='Limpar' onClick={Limpar}>Limpar</button>
                 </div>
             </section>

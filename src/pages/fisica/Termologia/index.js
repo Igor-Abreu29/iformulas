@@ -1,6 +1,6 @@
 import './termo.css'
 import { IoMdArrowBack } from 'react-icons/io'
-import { Link } from '../../components/link'
+import { Link } from '../../../components/link'
 import { toast } from 'react-toastify';
 
 export function Termo(){

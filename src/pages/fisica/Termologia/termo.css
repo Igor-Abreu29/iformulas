@@ -1,4 +1,4 @@
-.div-principal{
+.termo-principal{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
     position: relative;
 }
 
-.form{
+.inputs{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
     padding: .5rem;
 }
 
-.form input{
+.inputs input{
     outline: none;
     border:none;
     padding: .8rem 2.5rem;
@@ -51,7 +51,7 @@
     margin-bottom: .5em;
 }
 
-.box-number div{
+.box-number section{
     max-width: 100%;
     width: 100%;
     font-size:1.2rem;
@@ -63,7 +63,7 @@
     justify-content: center;
 }
 
-.box-number > div > label{
+.box-number > section > label{
     position: absolute;
     font-weight: bold;
     left:0;
@@ -78,6 +78,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    user-select: none;
 }
 
 .calc label{
@@ -93,7 +94,7 @@
     left:-6rem;
 }
 
-#calc{
+#calc, #result{
     background-color: white;
     padding: .8rem 2.5rem;
     border-radius: .2rem;

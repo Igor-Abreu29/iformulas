@@ -1,21 +1,17 @@
 import './termo.css'
 import { IoMdArrowBack } from 'react-icons/io'
 import { Link } from '../../components/link'
-import { useState } from 'react'
-
 import { toast } from 'react-toastify'
 
+import { useState } from 'react'
+
 export function Termo(){
-    const [mal, setMal] = useState("")
-    const [cont, setCont] = useState("")
-    const [cant, setCant] = useState("")
-    const [cent, setCent] = useState("")
 
     let txtn1 = document.getElementById('txtn1')
     let txtn2 = document.getElementById('txtn2')
     let txtn3 = document.getElementById('txtn3')
     let txtn4 = document.getElementById('txtn4')
-    let result = document.getElementById('result')
+    let result = document.getElementById('p-result')
     let calc = document.getElementById('p-calc')
 
     function calorS(){
@@ -34,7 +30,8 @@ export function Termo(){
     
             if(txtn1.value.length === 0){
                 let multiplicação = input2 * input3 * input4
-                result.value = `${multiplicação} cal/gºC `
+                result.style.color = 'black'
+                result.innerHTML = `${multiplicação} cal/gºC `
         
                 calc.style.color = 'black';
                 calc.innerHTML = `Q = ${input2} . ${input3} . ${input4} <br/>`
@@ -43,7 +40,8 @@ export function Termo(){
     
             if(txtn2.value.length === 0){
                 let divisão = input1 / (input3 * input4)
-                result.value = `${divisão} g`
+                result.style.color = 'black'
+                result.innerHTML = `${divisão} g`
     
                 let inputs = input3 * input4
                 calc.style.color = 'black';
@@ -54,7 +52,8 @@ export function Termo(){
     
             if(txtn3.value.length === 0){
                 let divisão = input1 / (input2 * input4)
-                result.value = `${divisão} g.ºC`
+                result.style.color = 'black'
+                result.innerHTML = `${divisão} g.ºC`
     
                 let inputs = input2 * input4
                 calc.style.color = 'black';
@@ -65,7 +64,8 @@ export function Termo(){
     
             if(txtn4.value.length === 0){
                 let divisão = input1 / (input2 * input3)
-                result.value = `${divisão} ºC`
+                result.style.color = 'black'
+                result.innerHTML = `${divisão} ºC`
     
                 let inputs = input2 * input3
                 calc.style.color = 'black';
@@ -94,7 +94,8 @@ export function Termo(){
           }
             if(txtn2.value.length === 0){
                 let divisão = input2 / input3
-                result.value = `${divisão} Cal/ºC `
+                result.style.color = 'black'
+                result.innerHTML = `${divisão} Cal/ºC `
     
                 calc.style.color = 'black';
                 calc.innerHTML = `C = ${input2} / ${input3} <br/>`
@@ -103,7 +104,8 @@ export function Termo(){
         
             if(txtn3.value.length === 0){
                 let divisão = input1 * input3
-                result.value = `${divisão} Cal`
+                result.style.color = 'black'
+                result.innerHTML = `${divisão} Cal`
     
                 calc.style.color = 'black';
                 calc.innerHTML = `Q = ${input1} . ${input3} <br/>`
@@ -112,7 +114,8 @@ export function Termo(){
         
             if(txtn4.value.length === 0){
                 let multiplicação = input2 / input1
-                result.value = `${multiplicação} ºC`
+                result.style.color = 'black'
+                result.innerHTML = `${multiplicação} ºC`
     
                 calc.style.color = 'black';
                 calc.innerHTML = `Δθ = ${input2} / ${input1} <br/>`
@@ -139,7 +142,8 @@ export function Termo(){
               }
                 if(txtn2.value.length === 0){
                     let divisão = input2 / input3
-                    result.value = `${divisão} cal/s `
+                    result.style.color = 'black'
+                    result.innerHTML = `${divisão} cal/s `
         
                     calc.style.color = 'black';
                     calc.innerHTML = `Φ = ${input2} / ${input3} <br/>`
@@ -148,7 +152,8 @@ export function Termo(){
             
                 if(txtn3.value.length === 0){
                     let divisão = input1 * input3
-                    result.value = `${divisão} cal`
+                    result.style.color = 'black'
+                    result.innerHTML = `${divisão} cal`
         
                     calc.style.color = 'black';
                     calc.innerHTML = `Q = ${input1} . ${input3} <br/>`
@@ -157,7 +162,8 @@ export function Termo(){
             
                 if(txtn4.value.length === 0){
                     let multiplicação = input2 / input1
-                    result.value = `${multiplicação} s`
+                    result.style.color = 'black'
+                    result.innerHTML = `${multiplicação} s`
         
                     calc.style.color = 'black';
                     calc.innerHTML = `ΔT = ${input2} / ${input1} <br/>`
@@ -183,7 +189,8 @@ export function Termo(){
               }
                 if(txtn2.value.length === 0){
                     let divisão = input2 * input3
-                    result.value = `${divisão} cal `
+                    result.style.color = 'black'
+                    result.innerHTML = `${divisão} cal `
         
                     calc.style.color = 'black';
                     calc.innerHTML = `Q = ${input2} * ${input3} <br/>`
@@ -192,7 +199,8 @@ export function Termo(){
             
                 if(txtn3.value.length === 0){
                     let divisão = input1 / input3
-                    result.value = `${divisão} cal`
+                    result.style.color = 'black'
+                    result.innerHTML = `${divisão} cal`
         
                     calc.style.color = 'black';
                     calc.innerHTML = `m = ${input1} / ${input3} <br/>`
@@ -201,7 +209,8 @@ export function Termo(){
             
                 if(txtn4.value.length === 0){
                     let multiplicação = input1 / input2
-                    result.value = `${multiplicação} cal/g`
+                    result.style.color = 'black'
+                    result.innerHTML = `${multiplicação} cal/g`
         
                     calc.style.color = 'black';
                     calc.innerHTML = `L = ${input1} / ${input2} <br/>`
@@ -219,14 +228,15 @@ export function Termo(){
             txtn2.value = '';
             txtn3.value = '';
             txtn4.value = '';
-            result.value = '';
+            result.style.color = '#7a7171'
+            result.innerHTML = 'Resultado...';
             calc.style.color = '#7a7171'
             calc.innerHTML = 'Cálculo...';
             toast.success("Você limpou suas caixas!")
         }
 
     return(
-        <main className='div-principal'>
+        <div className='termo-principal'>
             <header className='title'>
                 <h1>
                     Termologia: 
@@ -239,43 +249,45 @@ export function Termo(){
                 </Link>
             </header>
             
-            <section className='section-1'>
-                <form className='form'>
+            <main className='section-1'>
+                <section className='inputs'>
 
                     <div className='box-number'>
-                        <div>
+                        <section>
                             <label>Q:</label>
                             <input 
-                            onChange={(e) => setMal(e.target.value)} id='txtn1' type={'number'} placeholder="Para calor sensível..." />
-                        </div>
+                            id='txtn1' 
+                            type={'number'} 
+                            placeholder="Para calor sensível..." />
+                        </section>
                             
-                        <div>
+                        <section>
                             <input
-                              onChange={(e) => setCont(e.target.value)} id='txtn2' type={'number'} placeholder="Escreva aqui..."  />
-                        </div>
+                              id='txtn2' 
+                              type={'number'} 
+                              placeholder="Escreva aqui..."  />
+                        </section>
 
-                        <div>
+                        <section>
                             <input 
-                             onChange={(e) => setCant(e.target.value)} id='txtn3' type={'number'} placeholder="Escreva aqui..." />
-                        </div> 
+                             id='txtn3' 
+                             type={'number'} 
+                             placeholder="Escreva aqui..." />
+                        </section> 
 
-                        <div>
+                        <section>
                             <input 
-                          onChange={(e) => setCent(e.target.value)} id='txtn4' type={'number'} placeholder="Escreva aqui..." />
-                        </div>    
-                    </div>
-
-                    <div className='none'>
-                        <input value={mal} type={'text'}></input>
-                        <input value={cont} type={'text'}></input>
-                        <input value={cant} type={'text'}></input>
-                        <input value={cent} type={'text'}></input>
-
+                           id='txtn4' 
+                           type={'number'} 
+                           placeholder="Escreva aqui..." />
+                        </section>    
                     </div>
 
                     <div className='result'>
                         <label>Resultado:</label>
-                        <input type={'text'} placeholder="Resultado..." id='result'/>
+                        <div id='result'>
+                            <p id='p-result'>Resultado...</p>
+                        </div>
                     </div>
 
                     <div className='calc'>
@@ -284,9 +296,8 @@ export function Termo(){
                             <p id='p-calc'>Cálculo...</p>
                         </div>
                     </div>
-                
-                </form>
 
+                    
                 <div className='button'>
                     <button onClick={calorS}>CalorS</button>
                     <button onClick={capacT}>CapacidadeT</button>
@@ -294,7 +305,9 @@ export function Termo(){
                     <button onClick={calorL}>CalorL</button>
                     <button className='Limpar' onClick={Limpar}>Limpar</button>
                 </div>
-            </section>
-        </main>
+                
+                </section>
+            </main>
+        </div>
     )
 }

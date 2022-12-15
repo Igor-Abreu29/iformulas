@@ -1,5 +1,5 @@
 import './home.css'
-import Icon from '../components/icons'
+import Icon from '../../components/icons'
 import { AiFillCopyrightCircle } from 'react-icons/ai'
 
 export default function Home(){

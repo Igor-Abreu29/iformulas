@@ -3,8 +3,6 @@ import { IoMdArrowBack } from 'react-icons/io'
 import { Link } from '../../components/link'
 import { toast } from 'react-toastify'
 
-import { useState } from 'react'
-
 export function Termo(){
 
     let txtn1 = document.getElementById('txtn1')

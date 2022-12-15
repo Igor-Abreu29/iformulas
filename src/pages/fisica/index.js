@@ -1,7 +1,7 @@
 import "./fis.css"
 import {AiFillCopyrightCircle} from 'react-icons/ai'
 import { IoMdArrowBack } from "react-icons/io"
-import { Link } from "../components/link"
+import { Link } from "../../components/link"
 
 
 export default function Fisica(){

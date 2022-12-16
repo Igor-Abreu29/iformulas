@@ -23,19 +23,11 @@ export default function Fisica(){
            </div>  
 
             <section className="box-button">
-                
-                <button>
-                    <Link to="./termologia">Termologia</Link>
-                </button>
+                    <Link className="link" to="./termologia">Termologia</Link>
 
-                <button>
-                    <Link>Cinemática</Link>
-                </button>
+                    <Link className="link">Cinemática</Link>
 
-                <button>
-                    <Link>HidroEstática</Link>
-                </button>
-
+                    <Link className="link">HidroEstática</Link>
             </section>
 
             <footer>

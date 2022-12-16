@@ -71,7 +71,7 @@
 .box-number > div > label{
     position: absolute;
     font-weight: bold;
-    left:0;
+    left:-2rem;
 }
 
 #result, #calc{
@@ -96,7 +96,7 @@
     margin-right: 6px;
     font-weight: bold;
     position: absolute;
-    left:-6rem;
+    left:-4rem;
 }
 
 #calc, #result{
@@ -168,7 +168,7 @@ button{
     }
 
     .box-number > div > label{
-        left:1.4rem;
+        left:1rem;
     }
     
 }

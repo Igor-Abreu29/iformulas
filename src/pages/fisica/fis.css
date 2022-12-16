@@ -40,7 +40,7 @@
     padding: 1rem;
 }
 
-.box-button button{
+.box-button .link{
     background: linear-gradient( 180deg,var(--black), var(--violet));
     margin-top: .4rem;
     border-radius: 4px;
@@ -55,7 +55,7 @@
     text-align: center;
 }
 
-.box-button button:hover{
+.box-button .link:hover{
     transform: scale(1.04);
 }
 

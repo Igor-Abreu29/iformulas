@@ -18,13 +18,13 @@
     font-size: 3rem;
 }
 
-.information-erro{
+.box-erro{
     color:white;
     text-align: center;
     font-size: 1.2rem;
 }
 
-.information-erro h2{
+.box-erro h2{
     font-size: 1.8rem;
     margin-bottom: .5rem;
 }

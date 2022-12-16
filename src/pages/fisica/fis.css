@@ -31,7 +31,7 @@
 
 .box-button{
     height: 30vh;
-    max-width: 45rem;
+    max-width: 50rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -48,9 +48,11 @@
     transition: all .5s;
     border:none;
     color:white;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     padding: 1rem 2rem;
+    font-size:1.2rem;
+    text-align: center;
 }
 
 .box-button button:hover{
@@ -64,6 +66,12 @@ footer{
     justify-content: center;
 }
 
-@media(max-width: 600px){
-    
+@media (max-width: 550px){
+    .title-fis{
+        padding-left: 4rem;
+    }
+
+    .box-title{
+        font-size:1.3rem;
+    }
 }

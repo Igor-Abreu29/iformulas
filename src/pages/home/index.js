@@ -8,7 +8,7 @@ export default function Home(){
             <header className="title">
                 <h1>IFormulas</h1>
 
-                <nav className='box-link'>
+                <div className='box-information'>
                     <span className='span-1'>Contatos
                       <ul>
                         <li>(91) 9-99671491</li>
@@ -34,7 +34,7 @@ export default function Home(){
                             </li>
                         </ul>
                     </span>
-                </nav>
+                </div>
             </header>
 
             <section className="container-content">

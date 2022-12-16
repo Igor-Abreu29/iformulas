@@ -1,7 +1,7 @@
 import "./fis.css"
 import {AiFillCopyrightCircle} from 'react-icons/ai'
 import { IoMdArrowBack } from "react-icons/io"
-import { Link } from "../../components/link"
+import { Link } from "react-router-dom"
 
 
 export default function Fisica(){
@@ -9,7 +9,7 @@ export default function Fisica(){
         <main className="container-principal">
             <header className="title title-fis">
                 <h1>Física:</h1>
-                <Link url={'/'}>
+                <Link to={'/'} className="link">
                     <div className="back">
                         <IoMdArrowBack className="back-icon"/>
                     </div>
@@ -25,7 +25,7 @@ export default function Fisica(){
             <section className="box-button">
                 
                 <button>
-                    <Link url="./fisica/termologia">Termologia</Link>
+                    <Link to="./termologia">Termologia</Link>
                 </button>
 
                 <button>

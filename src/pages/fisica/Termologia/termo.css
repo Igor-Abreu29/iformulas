@@ -5,11 +5,11 @@
     flex-direction: column;
 }
 
-.section-1{
+.main{
     background-color: #dbdada;
     max-width: 700px;
     padding: 1em;
-    width: 100%;
+    width: 90%;
     margin-top: 2rem;
     color:black;
     display: flex;
@@ -40,18 +40,23 @@
     font-size: 1rem;
 }
 
-.box-number{
+.box-number, .section-results{
     max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid #c3c3c3;
+}
+
+.section-results{
+    padding-bottom: .5rem;
 }
 
 .box-number input{
     margin-bottom: .5em;
 }
 
-.box-number section{
+.box-number div{
     max-width: 100%;
     width: 100%;
     font-size:1.2rem;
@@ -63,7 +68,7 @@
     justify-content: center;
 }
 
-.box-number > section > label{
+.box-number > div > label{
     position: absolute;
     font-weight: bold;
     left:0;
@@ -142,4 +147,28 @@ button{
 
 .none input{
     margin-top:.5rem;
+}
+
+@media(max-width:550px){
+    .title-termologia{
+        padding-left: 4rem;
+    }   
+
+    .button{
+        flex-direction: column;
+        padding-top: 1.3rem;
+    }
+
+    .result label, .calc label{
+        display: none;
+    }
+
+    .inputs input{
+        padding: .8rem 1.5rem;
+    }
+
+    .box-number > div > label{
+        left:1.4rem;
+    }
+    
 }

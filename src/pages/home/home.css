@@ -29,7 +29,7 @@ a{
     font-size: 2.8rem;
 }
 
-.box-link{
+.box-information{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +39,7 @@ a{
     gap:.5em;
 }
 
-.box-link span{
+.box-information span{
     background-color: red;
     padding: .8em;
     border-radius: .5em;
@@ -60,7 +60,7 @@ span ul{
     gap: .5rem;
 }
 
-.box-link li{
+.box-information li{
     padding: .5rem 1rem;
     background-color: white;
     color:black;
@@ -157,19 +157,19 @@ span:hover{
         padding: 1.5em .2em;
     }
 
-    .box-link{
+    .box-information{
         right: .5em;
     }
 }
 
 @media(max-width:499px){
-    .box-link{
-        bottom:1em;
+    .box-information{
+        bottom:1.5em;
         left: 1em;
         background: black;
         padding: 1em 2em;
         border-radius: .5em;
-        max-width: 260px;
+        max-width: 290px;
         width: 100%;
     }
 
@@ -188,5 +188,9 @@ span:hover{
 
     .title h1{
         text-align: center;
+    }
+
+    .span-1 ul{
+        left:1.2em;
     }
 }

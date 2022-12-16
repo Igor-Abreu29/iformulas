@@ -1,9 +1,15 @@
 import './termo.css'
 import { IoMdArrowBack } from 'react-icons/io'
-import { Link } from '../../../components/link'
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useState } from 'react'
 
 export function Termo(){
+
+    const [ input1, setInput1 ] = useState("");
+    const [ input2, setInput2 ] = useState("");
+    const [ input3, setInput3 ] = useState("");
+    const [ input4, setInput4 ] = useState("");
 
     let txtn1 = document.getElementById('txtn1')
     let txtn2 = document.getElementById('txtn2')
@@ -14,7 +20,7 @@ export function Termo(){
 
     function calorS(){
 
-        if((txtn1.value.length === 0) && (txtn2.value.length === 0) && (txtn3.value.length === 0) && (txtn4.value.length === 0)){
+        if((input1.length === 0) && (input2.length === 0) && (input3.length === 0) && (input4.length === 0)){
             toast.warning('Por favor, digite um número!')
         }else{
             
@@ -71,25 +77,22 @@ export function Termo(){
                 calc.innerHTML += `Δθ = ${input1} / ${inputs} <br/>`  
                 calc.innerHTML += `Δθ = ${divisão} ºC` 
             }
-    
-            txtn1.value = '';
-            txtn2.value = '';
-            txtn3.value = '';
-            txtn4.value = '';
         }
     }
 
     function capacT(){
-        let input1 = Number(txtn2.value)
-        let input2 = Number(txtn3.value)
-        let input3 = Number(txtn4.value)
     
-        if((txtn2.value.length === 0) && (txtn3.value.length === 0) && (txtn4.value.length === 0)){
+        if((input2.length === 0) && (input3.length === 0) && (input4.length === 0)){
             toast.warning("Por favor, adicione um valor!")
         }else{
           if((txtn2.value.length !== 0) && (txtn3.value.length !== 0) && (txtn4.value.length !== 0)){
             toast.warning("Adicione apenas dois valores!")
           }
+
+          let input1 = Number(txtn2.value)
+          let input2 = Number(txtn3.value)
+          let input3 = Number(txtn4.value)
+
             if(txtn2.value.length === 0){
                 let divisão = input2 / input3
                 result.style.color = 'black'
@@ -119,25 +122,23 @@ export function Termo(){
                 calc.innerHTML = `Δθ = ${input2} / ${input1} <br/>`
                 calc.innerHTML += `Δθ = ${multiplicação} ºC`
             }
-        
-            txtn2.value = '';
-            txtn3.value = '';
-            txtn4.value = '';
         }
     }
 
 
         function fluxoC(){
-            let input1 = Number(txtn2.value)
-            let input2 = Number(txtn3.value)
-            let input3 = Number(txtn4.value)
 
-            if((txtn2.value.length === 0) && (txtn3.value.length === 0) && (txtn4.value.length === 0)){
+            if((input2.length === 0) && (input3.length === 0) && (input4.length === 0)){
                 toast.warning("Por favor, adicione um valor!")
             }else{
               if((txtn2.value.length !== 0) && (txtn3.value.length !== 0) && (txtn4.value.length !== 0)){
                 toast.warning("Adicione apenas dois valores!")
               }
+
+              let input1 = Number(txtn2.value)
+              let input2 = Number(txtn3.value)
+              let input3 = Number(txtn4.value)
+
                 if(txtn2.value.length === 0){
                     let divisão = input2 / input3
                     result.style.color = 'black'
@@ -167,24 +168,21 @@ export function Termo(){
                     calc.innerHTML = `ΔT = ${input2} / ${input1} <br/>`
                     calc.innerHTML += `ΔT = ${multiplicação} s`
                 }
-            
-                txtn2.value = '';
-                txtn3.value = '';
-                txtn4.value = '';
          }
      }
 
      function calorL(){
-            let input1 = Number(txtn2.value)
-            let input2 = Number(txtn3.value)
-            let input3 = Number(txtn4.value)
 
-            if((txtn2.value.length === 0) && (txtn3.value.length === 0) && (txtn4.value.length === 0)){
+            if((input2.length === 0) && (input2.length === 0) && (input4.length === 0)){
                 toast.warning("Por favor, adicione um valor!")
             }else{
               if((txtn2.value.length !== 0) && (txtn3.value.length !== 0) && (txtn4.value.length !== 0)){
                 toast.warning("Adicione apenas dois valores!")
               }
+
+              let input1 = Number(txtn2.value)
+              let input2 = Number(txtn3.value)
+              let input3 = Number(txtn4.value)
                 if(txtn2.value.length === 0){
                     let divisão = input2 * input3
                     result.style.color = 'black'
@@ -214,10 +212,6 @@ export function Termo(){
                     calc.innerHTML = `L = ${input1} / ${input2} <br/>`
                     calc.innerHTML += `L = ${multiplicação} cal/g`
                 }
-            
-                txtn2.value = '';
-                txtn3.value = '';
-                txtn4.value = '';
          }
      }
     
@@ -235,74 +229,83 @@ export function Termo(){
 
     return(
         <div className='termo-principal'>
-            <header className='title'>
+            <header className='title title-termologia'>
                 <h1>
                     Termologia: 
                 </h1>
 
-                <Link url={'/fisica'}>
+                <Link to={'/fisica'} className="link">
                     <div className="back">
                         <IoMdArrowBack className="back-icon"/>
                     </div>
                 </Link>
             </header>
             
-            <main className='section-1'>
+            <main className='main'>
                 <section className='inputs'>
 
-                    <div className='box-number'>
-                        <section>
+                    <section className='box-number'>
+                        <div>
                             <label>Q:</label>
                             <input 
+                            value={input1}
+                            onChange = {(e) => setInput1(e.target.value)}
                             id='txtn1' 
                             type={'number'} 
                             placeholder="Para calor sensível..." />
-                        </section>
+                        </div>
                             
-                        <section>
+                        <div>
                             <input
+                            value={input2}
+                            onChange = {(e) => setInput2(e.target.value)}
                               id='txtn2' 
                               type={'number'} 
                               placeholder="Escreva aqui..."  />
-                        </section>
+                        </div>
 
-                        <section>
+                        <div>
                             <input 
+                            value={input3}
+                            onChange = {(e) => setInput3(e.target.value)}
                              id='txtn3' 
                              type={'number'} 
                              placeholder="Escreva aqui..." />
-                        </section> 
+                        </div> 
 
-                        <section>
+                        <div>
                             <input 
+                            value={input4}
+                            onChange = {(e) => setInput4(e.target.value)}
                            id='txtn4' 
                            type={'number'} 
                            placeholder="Escreva aqui..." />
-                        </section>    
-                    </div>
+                        </div>    
+                    </section>
 
-                    <div className='result'>
-                        <label>Resultado:</label>
-                        <div id='result'>
+                    <section className='section-results'>
+                        <div className='result'>
+                            <label>Resultado:</label>
+                            <div id='result'>
                             <p id='p-result'>Resultado...</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className='calc'>
-                        <label>Cálculo:</label>
-                        <div id='calc'>
+                        <div className='calc'>
+                            <label>Cálculo:</label>
+                            <div id='calc'>
                             <p id='p-calc'>Cálculo...</p>
+                            </div>
                         </div>
-                    </div>
-
+                    </section>
                     
-                <div className='button'>
+                <section className='button'>
                     <button onClick={calorS}>CalorS</button>
                     <button onClick={capacT}>CapacidadeT</button>
                     <button onClick={fluxoC}>FluxoC</button>
                     <button onClick={calorL}>CalorL</button>
                     <button className='Limpar' onClick={Limpar}>Limpar</button>
-                </div>
+                </section>
                 
                 </section>
             </main>

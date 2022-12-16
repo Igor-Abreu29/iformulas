@@ -40,7 +40,7 @@ a{
 }
 
 .box-information span{
-    background-color: red;
+    background-color: #cf2106;
     padding: .8em;
     border-radius: .5em;
     position: relative;
@@ -136,15 +136,15 @@ span:hover{
 }
 
 .mat{
-    background-color: red;
+    background-color: #0ab24a;
 }
 
 .fis{
-    background-color: blueviolet;
+    background-color: #ae25d4d7;
 }
 
 .qui{
-    background-color: green;
+    background-color: #2556e7;
 }
 
 @media(min-width: 500px) and (max-width: 700px){
@@ -192,5 +192,9 @@ span:hover{
 
     .span-1 ul{
         left:1.2em;
+    }
+
+    .title-home h1{
+        font-size: 2.2rem
     }
 }

@@ -5,7 +5,7 @@ import { AiFillCopyrightCircle } from 'react-icons/ai'
 export default function Home(){
     return(
         <main className="container-principal">
-            <header className="title">
+            <header className="title title-home">
                 <h1>IFormulas</h1>
 
                 <div className='box-information'>

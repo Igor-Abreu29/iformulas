@@ -1,15 +1,12 @@
-.principal-mat{
+.principal-qui{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 3.5rem;
-    color:white;
+    padding-top: 3rem;
 }
 
-.principal-mat h1{
-    color: #e6e6e6;
-    font-weight: bold;
+.principal-qui h1{
     margin-bottom: 1rem;
 }
 

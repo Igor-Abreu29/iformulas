@@ -1,0 +1,29 @@
+.box-link{
+    height: 9vh;
+    max-width: 50rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.box-link .link{
+    margin-top: .4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s;
+    border:none;
+    color:black;
+    max-width: 600px;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size:1.2rem;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.box-link .link:hover{
+    transform: scale(1.04);
+}

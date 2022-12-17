@@ -6,6 +6,7 @@ import Matematica from './pages/mat'
 import Fisica from './pages/fisica'
 import Quimica from './pages/quimica'
 import { Termo } from './pages/fisica/Termologia'
+import { Cine } from "./pages/fisica/cinematica";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/fisica/termologia',
     element: <Termo />
+  },
+  {
+    path: '/fisica/cinematica',
+    element: <Cine />
   },
   {
     path: '/quimica',

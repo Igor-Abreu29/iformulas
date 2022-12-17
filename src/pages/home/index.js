@@ -37,25 +37,25 @@ export default function Home(){
                 </div>
             </header>
 
-            <section className="container-content">
+            <main className="container-content">
                 <h1>Escolha a matéria: </h1>
 
-                <div className="container mat" onClick={mat}>
+                <section className="container mat" onClick={mat}>
                     <a className='link' href='../matematica'>
                         Matemática
                     </a>
-                </div>
-                <div className="container fis">
+                </section>
+                <section className="container fis">
                     <a className="link" href="../fisica">
                         Física
                     </a>
-                </div>
-                <div className="container qui">
+                </section>
+                <section className="container qui">
                     <a className="link"  href="../quimica">
                         Química
                     </a>
-                </div>
-            </section>
+                </section>
+            </main>
             
             <footer>
 
